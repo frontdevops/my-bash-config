@@ -1,0 +1,20 @@
+[core]
+    autocrlf = false
+    editor = mcedit
+
+[user]
+    email = alexander@majorov.su
+    name = Alexander Majorov
+
+[alias]
+    co = checkout
+    ci = commit
+    up = pull
+    br = branch
+    st = status
+    lg = log --author \"Alexander Majorov\"
+    type = cat-file -t
+    dump = cat-file -p
+    hist = log --pretty=oneline --author \"Alexander Majorov\"
+    myhist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short --author \"Alexander Majorov\"
+    logv = log --author \"Alexander Majorov\" --name-only --pretty=oneline

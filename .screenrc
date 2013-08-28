@@ -1,0 +1,2 @@
+caption string "%{rk} %c %{dd} %{+b M}%n %{-b dd}%-w%{+b B.}%n* %t%{-}%+w%<"
+caption always
