@@ -24,4 +24,9 @@ pingrf()
 
 PS1='\[\e[1;32m\][ \A\[\e[m\] <\u@\h> \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]]\n[ bash: \[\e[m\]\[\e[0;32m\]'
 
+##
+# For root user add in /root/.bashrc this row:
+# PS1='\[\e[0;33m\][ \A\[\e[m\] <\u@\h> \[\e[0;33m\]\w\[\e[m\] \[\e[0;31m\]]\n[ bash: \[\e[m\]\[\e[1;31m\]'
+##
+
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
