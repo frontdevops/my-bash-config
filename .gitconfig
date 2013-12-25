@@ -1,5 +1,5 @@
 [core]
-    autocrlf = false
+    autocrlf = true
     editor = mcedit
     whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
 
