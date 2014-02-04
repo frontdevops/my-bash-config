@@ -26,6 +26,35 @@ PS1='\[\e[1;32m\][ \A\[\e[m\] <\u@\h> \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]]\n[ ba
 
 export SVN_EDITOR=mcedit
 
+alias gitst='git status'
+
+gitup()
+{
+  git fetch
+  git pull origin master
+}
+
+gitci()
+{
+  while getopts 'm:vf:v' flag
+  do
+    case $flag in
+      m) m=$OPTARG ;;
+      f) f=$OPTARG ;;
+      *) error "Unexpected option $flag" ;;
+    esac
+  done
+
+  m=${m:?"Empty value for -m!"}
+
+  gitup
+  git add ${f:-"."}
+  git ci -am "$m"
+  git push origin master
+}
+
+
+
 ##
 # For root user add in /root/.bashrc this row:
 # PS1='\[\e[0;33m\][ \A\[\e[m\] <\u@\h> \[\e[0;33m\]\w\[\e[m\] \[\e[0;31m\]]\n[ bash: \[\e[m\]\[\e[1;31m\]'
