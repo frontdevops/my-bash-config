@@ -6,8 +6,6 @@ HISTCONTROL=ignoreboth
 
 declare -x EDITOR=mcedit
 
-alias ~~="cd /www/sites/"
-
 function progress_sleep
 {
     for i in `echo -n|awk "END{for(i=0;i<$1;i++)print i;}"`
@@ -22,9 +20,37 @@ pingrf()
     ping $(idn --quiet "$@")
 }
 
+#PS1="\n\[\e[1;32m\][ \A\[\e[m\] <\u@\h> \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n[ bash: \[\e[m\]\[\e[0;32m\] "
+ PS1="\n\[\e[32m\][ \A\[\e[m\] <\u@\h> \[\e[33m\]\w\[\e[m\] \[\e[32m\]\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\[\e[41m\][ bash: \[\e[m\]\[\e[32m\] "
 
-#PS1='\[\e[1;32m\][ \A\[\e[m\] <\u@\h> \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]]\n[ bash: \[\e[m\]\[\e[0;32m\]'
-PS1="\n\[\e[1;32m\][ \A\[\e[m\] <\u@\h> \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n[ bash: \[\e[m\]\[\e[0;32m\] "
+alias gitst='git status'
+
+gitup()
+{
+  git fetch
+  git pull origin ${1:-master}
+}
+
+gitci()
+{
+    while getopts 'm:vf:vb:v' flag
+    do
+        case $flag in
+            m) m=$OPTARG ;;
+            f) f=$OPTARG ;;
+            b) b=$OPTARG ;;
+            *) error "Unexpected option $flag" ;;
+        esac
+    done
+
+    m=${m:?"Error! Empty argument -m"}
+    b=${b:-"master"}
+
+    gitup $b
+    git add ${f:-"."}
+    git commit -am "$m"
+    git push origin $b
+}
 
 ##
 # For root user add in /root/.bashrc this row:
