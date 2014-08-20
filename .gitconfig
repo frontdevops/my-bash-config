@@ -3,13 +3,12 @@
     editor = mcedit
 
 [user]
-    email = alexander@majorov.su
-    name = Alexander Majorov
+	name = mayorov
+	email = mayorov@tutu.ru
 
 [alias]
     co = checkout
     ci = commit
-    up = pull
     br = branch
     st = status
     lg = log --author \"Alexander Majorov\"
