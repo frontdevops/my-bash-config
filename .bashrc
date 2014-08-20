@@ -27,8 +27,9 @@ alias gitst='git status'
 
 gitup()
 {
-  git fetch
-  git pull origin ${1:-master}
+	git fetch
+	echo "git pull origin ${1:-master}"
+	git pull origin ${1:-master}
 }
 
 gitci()
@@ -41,15 +42,16 @@ gitci()
             b) b=$OPTARG ;;
             *) error "Unexpected option $flag" ;;
         esac
-    done
+	done
 
-    m=${m:?"Error! Empty argument -m"}
-    b=${b:-"master"}
+	m=${m:?"Error! Empty argument -m"}
+	b=${b:-"master"}
 
-    gitup $b
-    git add ${f:-"."}
-    git commit -am "$m"
-    git push origin $b
+	gitup $b
+	git add --all ${f:-"."}
+	git commit -am "$m"
+	echo "git push origin $b"
+	git push origin $b
 }
 
 ##
