@@ -3,10 +3,21 @@
 case ${1?"Set type argument: root or user"} in
     "root")
 	# For root user add in /root/.bashrc this row:
-	echo "PS1='\[\e[0;33m\][ \A\[\e[m\] <\u@\h> \[\e[0;33m\]\w\[\e[m\] \[\e[0;31m\]]\n[ bash: \[\e[m\]\[\e[1;31m\]'"
+	echo 'PS1="\[\e[0;33m\][ \A\[\e[m\] <\u@\h> \[\e[0;33m\]\w\[\e[m\] \[\e[0;31m\]]\n[ bash: \[\e[m\]\[\e[1;31m\]"'
     ;;
     *)
 	# For user
-	echo "PS1='\n\[\e[32m\][ \A\[\e[m\] <\u@\h> \[\e[33m\]\w\[\e[m\] \[\e[32m\]\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\[\e[41m\][ bash: \[\e[m\]\[\e[32m\] '"
+	echo 'PS1="\n\[\e[32m\][ \A\[\e[m\] <\u@\h> \[\e[33m\]\w\[\e[m\] \[\e[32m\]\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\[\e[41m\][ bash: \[\e[m\]\[\e[32m\] "'
+	echo 'SUDO_PS1="\[$bakred\]\u@\h\[$txtrst\] \w\$ "'
+
     ;;
 esac
+
+# Default Git enabled prompt with dirty state
+# export PS1="\u@\h \w \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
+
+# Another variant:
+# export PS1="\[$bldgrn\]\u@\h\[$txtrst\] \w \[$bldylw\]\$git_branch\[$txtcyn\]\$git_dirty\[$txtrst\]\$ "
+
+# Default Git enabled root prompt (for use with "sudo -s")
+# export SUDO_PS1="\[$bakred\]\u@\h\[$txtrst\] \w\$ "

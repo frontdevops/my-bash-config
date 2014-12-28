@@ -53,3 +53,6 @@ gitci()
 	echo "git push origin $b"
 	git push origin $b
 }
+
+source ~/myshellconfig/colors.sh
+source ~/myshellconfig/prompt-git.sh
