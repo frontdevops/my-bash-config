@@ -1,13 +1,22 @@
 #!/bin/bash
 
+itype=${1?"Input installation type! Usage: $0 [root|user]"}
+echo "Install for root user:"
+
 cdir=`dirname $0`
 
 for k in \
-    bashrc \
     screenrc \
     gitconfig
 do
-    cp -v $cdir/.$k ~/.$k
+    ln -vsfT $cdir/.$k ~/.$k
 done
+
+echo "Add .bashrc link"
+echo -e "\n\n#Added by myshell config\n. $cdir/.bashrc\n" >> ~/.bashrc
+
+echo "Set prompt string"
+echo `$cdir/prompt $itype` >> ~/.bashrc
+echo -e "\n\n" >> ~/.bashrc
 
 #EOF#

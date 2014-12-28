@@ -5,6 +5,7 @@ umask 002
 HISTCONTROL=ignoreboth
 
 declare -x EDITOR=mcedit
+export SVN_EDITOR=mcedit
 
 function progress_sleep
 {
@@ -21,8 +22,13 @@ pingrf()
 }
 
 #PS1="\n\[\e[1;32m\][ \A\[\e[m\] <\u@\h> \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n[ bash: \[\e[m\]\[\e[0;32m\] "
- PS1="\n\[\e[32m\][ \A\[\e[m\] <\u@\h> \[\e[33m\]\w\[\e[m\] \[\e[32m\]\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\[\e[41m\][ bash: \[\e[m\]\[\e[32m\] "
+PS1="\n\[\e[32m\][ \A\[\e[m\] <\u@\h> \[\e[33m\]\w\[\e[m\] \[\e[32m\]\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\[\e[41m\][ bash: \[\e[m\]\[\e[32m\] "
 
+# For root user add in /root/.bashrc this row:
+# PS1='\[\e[0;33m\][ \A\[\e[m\] <\u@\h> \[\e[0;33m\]\w\[\e[m\] \[\e[0;31m\]]\n[ bash: \[\e[m\]\[\e[1;31m\]'
+
+alias ll='ls -al'
+alias ~~="cd /www/sites/"
 alias gitst='git status'
 
 gitup()
@@ -53,10 +59,3 @@ gitci()
 	echo "git push origin $b"
 	git push origin $b
 }
-
-##
-# For root user add in /root/.bashrc this row:
-# PS1='\[\e[0;33m\][ \A\[\e[m\] <\u@\h> \[\e[0;33m\]\w\[\e[m\] \[\e[0;31m\]]\n[ bash: \[\e[m\]\[\e[1;31m\]'
-##
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
