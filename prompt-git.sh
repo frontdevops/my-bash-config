@@ -1,4 +1,5 @@
-find_git_branch() {
+find_git_branch()
+{
   local branch
   if branch=$(git rev-parse --abbrev-ref HEAD 2> /dev/null); then
     if [[ "$branch" == "HEAD" ]]; then
@@ -10,7 +11,8 @@ find_git_branch() {
   fi
 }
 
-find_git_dirty() {
+find_git_dirty()
+{
   local status=$(git status --porcelain 2> /dev/null)
   if [[ "$status" != "" ]]; then
     git_dirty='*'
