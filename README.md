@@ -1,7 +1,7 @@
 My Shell Config
 =============
 
-Simple configurations for Bash
+Simple configurations for Bash. These settings have been made for themselves. But it can be useful to someone else. You can clone the repository and to further develop its own version. This set of files can be core for your configuration.
 
 ## Features
 Install configurations for:
@@ -31,9 +31,14 @@ $ git clone https://github.com/i0z/myshellconfig.git
 $ ./myshellconfig/install root
 ```
 
-After installation  in your file system will two links on .bashrc and .screenrc to "myshellconfig" directory.
 After installation on your file system will see two links to the files in the directory test:
+```
+.screenrc -> myshellconfig/.screenrc
+.gitconfig -> myshellconfig/.gitconfig
+```
 
+I did not replace the original bashr`. I add a link to their version bashrk the end of your file.
+Now edit `.gitconfig` or delete this file and create new with your configurations.
 
 _WARNING!_ If you not trust me, don't do it. You can manually edit your `.bashrc` and set configuration.
 Or not to touch anything and leave everything as is. It's your choice.
