@@ -37,7 +37,12 @@ After installation on your file system will see two links to the files in the di
 .gitconfig -> myshellconfig/.gitconfig
 ```
 
-I did not replace the original bashr`. I add a link to their version bashrk the end of your file.
+I did not replace the original `.bashrc` in your home directory. I add a link to my version to the end of your configuration file. You can see in `install` script this rows:
+
+```bash
+>> ~/.bashrc
+```
+
 Now edit `.gitconfig` or delete this file and create new with your configurations.
 
 _WARNING!_ If you not trust me, don't do it. You can manually edit your `.bashrc` and set configuration.
@@ -72,5 +77,5 @@ gitup
 
 ## License
 ```
-Free
+Free 4 all!
 ```
