@@ -1,16 +1,17 @@
 My Shell Config
 =============
-
 Simple configurations for Bash. These settings have been made for themselves. But it can be useful to someone else. You can clone the repository and to further develop its own version. This set of files can be core for your configuration.
+
+## Overview
+Working with the server through the terminal we are deprived of the comfort of desktop systems. It is therefore important to set up a bash console yourself as comfortable as possible. But the server may be more than one. And sometimes you need to go to a different server. So that every time you do not configure the terminal manually, I have created for themselves a set of basic configurations.
+
+This configuration I use on all my dedicated servers. I recomended to use screen. Why screen and what is the `.screenrc`? Suppose you want to run a program persistently (even if a terminal window closes, for example). For that, you might use the nohup command. But what if you want to start a command-line session on one computer and then go home and resume that session? For something like that, you’ll want to use screen. Screen is also really handy because you can have multiple shells running in one terminal window.
 
 ## Features
 Install configurations for:
  - screen
  - bash
  - git
-
-## Overview
-Why screen and what is the .screenrc? Suppose you want to run a program persistently (even if a terminal window closes, for example). For that, you might use the nohup command. But what if you want to start a command-line session on one computer and then go home and resume that session? For something like that, you’ll want to use screen. Screen is also really handy because you can have multiple shells running in one terminal window.
 
 ## Installation
 
