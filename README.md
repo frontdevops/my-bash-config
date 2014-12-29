@@ -3,17 +3,20 @@ My Shell Config
 
 Simple configurations for Bash
 
-# Features
+## Features
 Install configurations for:
  - screen
  - bash
  - git
 
-# Installation
+## Overview
+Why screen and what is the .screenrc? Suppose you want to run a program persistently (even if a terminal window closes, for example). For that, you might use the nohup command. But what if you want to start a command-line session on one computer and then go home and resume that session? For something like that, you’ll want to use screen. Screen is also really handy because you can have multiple shells running in one terminal window.
+
+## Installation
 
 Clone the project to a `myshellconfig` folder in your home directory:
 
-```
+```bash
 $ cd
 $ git clone https://github.com/i0z/myshellconfig.git
 $ ./myshellconfig/install user
@@ -21,12 +24,16 @@ $ ./myshellconfig/install user
 
 For root user clone the project in your root directory and run:
 
-```
+```bash
 $ su
 $ cd
 $ git clone https://github.com/i0z/myshellconfig.git
 $ ./myshellconfig/install root
 ```
+
+After installation  in your file system will two links on .bashrc and .screenrc to "myshellconfig" directory.
+After installation on your file system will see two links to the files in the directory test:
+
 
 _WARNING!_ If you not trust me, don't do it. You can manually edit your `.bashrc` and set configuration.
 Or not to touch anything and leave everything as is. It's your choice.
@@ -48,3 +55,17 @@ directory, your prompt works like normal.
 The new prompt will take effect beginning in your next session.
 This usually means logging out completely.
 To enable it in your current session, you can simply run `. ~/.bashrc` or create new window in screen (Ctrl+A C).
+
+# Updating
+
+Assuming you followed the default installation instructions and cloned this repo to `~/myshellconfig`:
+
+```bash
+cd ~/myshellconfig
+gitup
+```
+
+## License
+```
+Free
+```
