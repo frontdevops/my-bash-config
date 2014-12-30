@@ -13,7 +13,7 @@ do
 done
 
 echo "Add .bashrc link"
-echo -e "\n\n#Added by myshell config\n. $cdir/.bashrc\n" >> ~/.bashrc
+echo -e "\n\n#Added by myshell config\n. ~/$cdir/.bashrc\n" >> ~/.bashrc
 
 echo "Set prompt string"
 echo `$cdir/prompt $itype` >> ~/.bashrc
