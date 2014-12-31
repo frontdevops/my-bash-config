@@ -21,10 +21,12 @@ pingrf()
     ping $(idn --quiet "$@")
 }
 
+alias cd..="cd .."
 alias ll="ls -al"
 alias ~~="cd /www/sites/"
 alias gitst="git status"
 alias gitbr="git branch"
+alias gitdiff="git diff"
 
 gitup()
 {

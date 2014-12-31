@@ -19,6 +19,11 @@
     myhist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short --author \"Alexander Majorov\"
     logv = log --author \"Alexander Majorov\" --name-only --pretty=oneline
 
+[diff]
+    external = mcdiff
+[pager]
+    diff =
+
 [color]
         ui = auto
 [color "branch"]
