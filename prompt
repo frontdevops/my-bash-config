@@ -9,7 +9,6 @@ case ${1?"Set type argument: root or user"} in
 	# For user
 	echo 'PS1="\n\[\e[32m\][ \A\[\e[m\] <\u@\h> \[\e[33m\]\w\[\e[m\] \[\e[32m\]\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\[\e[41m\][ bash: \[\e[m\]\[\e[32m\] "'
 	#echo 'SUDO_PS1="\[$bakred\]\u@\h\[$txtrst\] \w\$ "'
-
     ;;
 esac
 
