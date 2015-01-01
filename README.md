@@ -1,4 +1,4 @@
-My Shell Config
+My Bash Config
 =============
 Simple configurations for Bash. These settings have been made for themselves. But it can be useful to someone else. You can clone the repository and to further develop its own version. This set of files can be core for your configuration.
 
