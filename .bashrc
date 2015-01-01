@@ -57,5 +57,5 @@ gitci()
 	git push origin $b
 }
 
-source ~/myshellconfig/colors.sh
-source ~/myshellconfig/prompt-git.sh
+source ~/my-bash-config/colors.sh
+source ~/my-bash-config/prompt-git.sh
