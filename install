@@ -3,7 +3,7 @@
 itype=${1?"Input installation type! Usage: $0 [root|user]"}
 echo "Install for root user:"
 
-cdir=`dirname $0`
+cdir=$(dirname $0)
 
 for k in \
     screenrc \
