@@ -21,6 +21,11 @@ pingrf()
     ping $(idn --quiet "$@")
 }
 
+
+#alias ls='ls --color'
+LS_COLORS='di=4:fi=32:ln=31:pi=5:so=43:bd=41:cd=36:or=33:mi=0:ex=1:*.rpm=90'
+export LS_COLORS
+
 alias cd..="cd .."
 alias ll="ls -al"
 alias ~~="cd /www/sites/"
