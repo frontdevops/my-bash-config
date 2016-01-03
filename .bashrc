@@ -23,12 +23,14 @@ pingrf()
 
 
 #alias ls='ls --color'
-LS_COLORS='di=4:fi=32:ln=31:pi=5:so=43:bd=41:cd=36:or=33:mi=0:ex=1:*.rpm=90'
+LS_COLORS='di=4:fi=32:ln=33:pi=5:so=43:bd=41:cd=36:or=31:mi=0:ex=1:*.rpm=90'
 export LS_COLORS
+
 
 alias cd..="cd .."
 alias ll="ls -al"
 alias ~~="cd /www/sites/"
+alias cdr="cd /root/"
 alias gitst="git status"
 alias gitbr="git branch"
 alias gitdiff="git diff"
@@ -62,5 +64,6 @@ gitci()
 	git push origin $b
 }
 
+source ~/my-bash-config/docker.sh
 source ~/my-bash-config/colors.sh
 source ~/my-bash-config/prompt-git.sh
