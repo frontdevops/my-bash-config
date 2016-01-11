@@ -29,14 +29,8 @@ export LS_COLORS
 
 alias cd..="cd .."
 alias ll="ls -al"
-<<<<<<< HEAD
-=======
-alias ~~="cd /www/sites/"
-alias cdr="cd /root/"
->>>>>>> 95808c0b07f4073872a1f77ead605a44e4235f5e
 alias gitst="git status"
 alias gitbr="git branch"
-alias gitdiff="git diff"
 
 gitup()
 {
