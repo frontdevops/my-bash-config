@@ -1,7 +1,17 @@
 if [ -f /etc/bashrc ];then . /etc/bashrc;fi
 if [ -f /etc/bash_completion ];then . /etc/bash_completion;fi
 
-umask 002
+
+if [ whoami = "root" ]
+then
+    echo "set umask 0002"
+    umask 0002
+else
+    echo "set umask 0022"
+    umask 0022
+fi
+
+
 HISTCONTROL=ignoreboth
 
 declare -x EDITOR=mcedit
