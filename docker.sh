@@ -1,10 +1,10 @@
 dockerip() {
-    sudo docker inspect --format '{{ .NetworkSettings.IPAddress }}' "$@"
+    docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' "$@"
 }
 
 dockerips() {
-	sudo docker ps
-	echo -e "\nIP for runed containers:"
+    docker ps
+    echo -e "\nIP for runed containers:"
     for dock in $(sudo docker ps | tail -n +2 | cut -d" " -f1)
     do
         local dock_ip=$(dockerip $dock)
