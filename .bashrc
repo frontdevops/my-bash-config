@@ -1,16 +1,5 @@
-if [ -f /etc/bashrc ];then . /etc/bashrc;fi
-if [ -f /etc/bash_completion ];then . /etc/bash_completion;fi
-
-
-if [ whoami = "root" ]
-then
-    echo "set umask 0002"
-    umask 0002
-else
-    echo "set umask 0022"
-    umask 0022
-fi
-
+#if [ -f /etc/bashrc ];then . /etc/bashrc;fi
+#if [ -f /etc/bash_completion ];then . /etc/bash_completion;fi
 
 HISTCONTROL=ignoreboth
 
@@ -26,6 +15,7 @@ function progress_sleep
     done
 }
 
+# yum install -y idn
 pingrf()
 {
     ping $(idn --quiet "$@")
