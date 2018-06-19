@@ -1,16 +1,19 @@
+
 dockerip() {
-    sudo docker inspect --format '{{ .NetworkSettings.IPAddress }}' "$@"
+    docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' "$@"
 }
 
 dockerips() {
-	sudo docker ps
-	echo -e "\nIP for runed containers:"
-    for dock in $(sudo docker ps | tail -n +2 | cut -d" " -f1)
-    do
-        local dock_ip=$(dockerip $dock)
-        if [[ -n "$dock_ip" ]]
-        then
-            echo $dock = $dock_ip
-        fi
-    done
+	for dock in $(docker ps|tail -n +2|cut -d" " -f1)
+	do
+		local dock_ip=$(dockerip $dock)
+		regex="s/$dock\s\{4\}/${dock:0:4}  ${dock_ip:-local.host}/g;$regex"
+	done
+
+	docker ps -a | sed -e "$regex"
 }
+
+
+alias _id_='docker ps -l -q'
+
+#EOF#
