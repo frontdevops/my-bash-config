@@ -7,7 +7,7 @@ dockerips() {
 	for dock in $(docker ps|tail -n +2|cut -d" " -f1)
 	do
 		local dock_ip=$(dockerip $dock)
-		regex="s/$dock\s\{4\}/${dock:0:4}  ${dock_ip:-local.host}/g;$regex"
+		regex="s/$dock\s\{4\}/${dock:0:4}  ${dock_ip:-127.0.0.1}/g;$regex"
 	done
 
 	docker ps -a | sed -e "$regex"
