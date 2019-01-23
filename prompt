@@ -3,7 +3,7 @@
 case ${1?"Set type argument: root or user"} in
     "root")
 	# For root user add in /root/.bashrc this row:
-	echo 'PS1="\[\e[0;33m\][ \A\[\e[m\] <\u@\h> \[\e[0;33m\]\w\[\e[m\] \[\e[0;31m\]]\n[ bash: \[\e[m\]\[\e[1;31m\]"'
+	echo 'PS1="\n\[\e[0;31m\]☰\[\e[0;33m\]  \t \[\e[0;31m\]❱\[\e[m\] \u@\h \[\e[0;31m\]❱\[\e[0;33m\] \w \[\e[m\]\[\e[0;31m\]❱\n❱❱❱ \[\e[m\]\[\e[0;91m\]"'
     ;;
     *)
 	# For user
