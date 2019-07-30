@@ -54,9 +54,15 @@ gitci()
 	m=${m:?"Error! Empty argument -m"}
 	b=${b:-"master"}
 
+	echo "gitup $b"
 	gitup $b
-	git add --all ${f:-"."}
+	
+	echo git add ${f:-"."}
+	git add ${f:-"."}
+
+	echo git commit -am "$m"
 	git commit -am "$m"
+
 	echo "git push origin $b"
 	git push origin $b
 }
