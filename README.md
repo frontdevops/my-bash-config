@@ -19,7 +19,7 @@ Clone the project to a `myshellconfig` folder in your home directory:
 
 ```bash
 $ cd
-$ git clone https://github.com/frontdevops/myshellconfig.git
+$ git clone https://github.com/frontdevops//my-bash-config.git
 $ ./myshellconfig/install user
 ```
 
@@ -28,7 +28,7 @@ For root user clone the project in your root directory and run:
 ```bash
 $ su
 $ cd
-$ git clone https://github.com/frontdevops/myshellconfig.git
+$ git clone https://github.com/frontdevops//my-bash-config.git
 $ ./myshellconfig/install root
 ```
 
