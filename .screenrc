@@ -18,10 +18,14 @@ mousetrack on
 
 # default windows
 screen -t Root.   1 bash
+stuff "su"
+
 screen -t Bash1   2 bash
 screen -t Bash2   3 bash
+
 screen -t IPython 4 ipython
 screen -t IPHP    5 php -a
+
 select 0
 bind c screen 1 # window numbering starts at 1 not 0
 bind 0 select 10
