@@ -6,6 +6,17 @@ HISTCONTROL=ignoreboth
 declare -x EDITOR=mcedit
 export SVN_EDITOR=mcedit
 
+
+
+alias cd..="cd .."
+alias gitst="git status"
+alias gitbr="git branch"
+# pip install vizex
+alias dfh="vizex"
+
+
+
+
 progress_sleep()
 {
     for i in `echo -n|awk "END{for(i=0;i<$1;i++)print i;}"`
@@ -20,19 +31,6 @@ pingrf()
 {
     ping $(idn --quiet "$@")
 }
-
-
-#alias ls='ls --color'
-LS_COLORS='di=4:fi=32:ln=33:pi=5:so=43:bd=41:cd=36:or=31:mi=0:ex=1:*.rpm=90'
-export LS_COLORS
-
-
-alias cd..="cd .."
-alias ll="ls -al"
-alias gitst="git status"
-alias gitbr="git branch"
-# pip install vizex
-alias dfh="vizex"
 
 
 gitup()
