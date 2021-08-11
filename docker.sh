@@ -1,19 +1,35 @@
+alias dockers='docker ps -lq'
 
 dockerip() {
     docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' "$@"
 }
 
 dockerips() {
-	for dock in $(docker ps|tail -n +2|cut -d" " -f1)
-	do
-		local dock_ip=$(dockerip $dock)
-		regex="s/$dock\s\{4\}/${dock:0:4}  ${dock_ip:-127.0.0.1}/g;$regex"
-	done
+    printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' =
+    #seq -s- $COLUMNS|tr -d '[:digit:]'
 
-	docker ps -a | sed -e "$regex"
+    i=0
+    docker ps | while read s
+    do
+        if [[ 0 == $i ]]
+        then
+            echo -e "| $s\tLocal IP"
+            printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
+            ((i=i+1))
+        else
+            uid=$(echo $s | awk '{print $1}')
+            localip=`dockerip $uid`
+            if [ ! -z "$localip" ]
+            then
+                echo -e  "| $s\t$localip"
+            else
+                echo -e "| $s\tlocalhost"
+            fi
+        fi
+    done
+
+    printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' _
 }
 
 
-alias _id_='docker ps -l -q'
 
-#EOF#
