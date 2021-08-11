@@ -1,8 +1,9 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 itype=${1?"Input installation type! Usage: $0 [root|user]"}
-echo "Install for root user:"
+echo "Install for $1:"
 
+hostname=$2
 cdir=$(dirname $0)
 
 for k in \
@@ -12,13 +13,27 @@ do
     ln -vsfT $cdir/.$k ~/.$k
 done
 
+
 echo "Add .bashrc link"
-#echo -e "\n\n#Added by my bash config\n. ~/$cdir/.bashrc\n" >> ~/.bashrc
-echo -e "\n\n\n#Added by my bash config\n\n"
+echo -e "\n\n\n#Added by my-bash-config\n\n"
 cat ~/$cdir/.bashrc >> ~/.bashrc
+echo -e "\n\n" >> ~/.bashrc
+
 
 echo "Set prompt string"
-echo `$cdir/prompt $itype` >> ~/.bashrc
-echo -e "\n" >> ~/.bashrc
+if ! -z $hostname
+then
+    echo -e "\tReplace host to user hostname: $hostname"
+    echo `$cdir/prompt $itype` | sed "s/\\h/$hostname/" >> ~/.bashrc
+else
+    echo `$cdir/prompt $itype` >> ~/.bashrc
+fi
+
+echo -e "\n\n" >> ~/.bashrc
+
+echo "Load new configuration..."
+source ~/.bashrc
+echo "Complete"
+
 
 #EOF#
