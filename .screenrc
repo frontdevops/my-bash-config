@@ -20,7 +20,8 @@ mousetrack on
 screen -t Root.   1 bash
 screen -t Bash1   2 bash
 screen -t Bash2   3 bash
-screen -t Python  4 python3.9
+screen -t IPython 4 ipython
+screen -t IPHP    5 php -a
 select 0
 bind c screen 1 # window numbering starts at 1 not 0
 bind 0 select 10
