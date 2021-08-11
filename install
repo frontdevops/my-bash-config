@@ -24,7 +24,7 @@ echo "Set prompt string"
 if ! -z $hostname
 then
     echo -e "\tReplace host to user hostname: $hostname"
-    echo `$cdir/prompt $itype` | sed "s/\\h/$hostname/" >> ~/.bashrc
+    echo `$cdir/prompt $itype` | sed "s/\\\h/$hostname/" >> ~/.bashrc
 else
     echo `$cdir/prompt $itype` >> ~/.bashrc
 fi
@@ -32,7 +32,7 @@ fi
 echo -e "\n\n" >> ~/.bashrc
 
 echo "Load new configuration..."
-source ~/.bashrc
+. ~/.bashrc
 echo "Complete"
 
 
