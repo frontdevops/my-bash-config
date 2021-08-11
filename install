@@ -31,8 +31,6 @@ fi
 
 echo -e "\n\n" >> ~/.bashrc
 
-echo "Load new configuration..."
-. ~/.bashrc
 echo "Complete"
 
 
