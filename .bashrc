@@ -8,6 +8,15 @@ declare -x EDITOR=mcedit
 export SVN_EDITOR=mcedit
 
 
+settitle()
+{
+    if [[ -z "$ORIG" ]]
+    then
+         ORIG=$PS1
+    fi
+    TITLE="\[\e]2;$*\a\]"
+    PS1=${ORIG}${TITLE}
+}
 
 progress_sleep()
 {
