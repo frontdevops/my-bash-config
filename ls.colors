@@ -1,9 +1,3 @@
-alias ls='ls --color'
-alias ll='ls -al --color'
-
-LS_COLORS='di=1:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35:*.rpm=90'
-export LS_COLORS
-
 The first line makes ls use the --color parameter by default, which tells ls to display files in different colours based on the setting of the LS_COLORS variable.
 
 The second line is the tricky one, and what I have worked out so far has been by trial and error.  The parameters (di, fi, etc.) refer to different Linux file types. I have worked them out as shown
