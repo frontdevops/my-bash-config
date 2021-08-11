@@ -4,8 +4,8 @@
     whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
 
 [user]
-	name = i0z
-	email = alexander.majorov@gmail.com
+	name = frontdevops
+	email = 
 
 [alias]
     co = checkout
