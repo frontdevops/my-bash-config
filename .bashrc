@@ -6,7 +6,7 @@ HISTCONTROL=ignoreboth
 declare -x EDITOR=mcedit
 export SVN_EDITOR=mcedit
 
-function progress_sleep
+progress_sleep()
 {
     for i in `echo -n|awk "END{for(i=0;i<$1;i++)print i;}"`
     do
@@ -31,6 +31,9 @@ alias cd..="cd .."
 alias ll="ls -al"
 alias gitst="git status"
 alias gitbr="git branch"
+# pip install vizex
+alias dfh="vizex"
+
 
 gitup()
 {
@@ -38,6 +41,7 @@ gitup()
 	echo "git pull origin ${1:-master}"
 	git pull origin ${1:-master}
 }
+
 
 gitci()
 {
@@ -58,10 +62,10 @@ gitci()
 	gitup $b
 	
 	echo git add ${f:-"."}
-	git add ${f:-"."}
+	git add --all ${f:-"."}
 
-	echo git commit -am "$m"
-	git commit -am "$m"
+	echo git commit -m "$m"
+	git commit -m "$m"
 
 	echo "git push origin $b"
 	git push origin $b
