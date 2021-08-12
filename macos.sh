@@ -44,4 +44,4 @@ function logout()
 }
 
 
-trap logout EXIT
+#trap logout EXIT
