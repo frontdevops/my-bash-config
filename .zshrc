@@ -13,26 +13,11 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 
 
 alias ll='ls -Gal'
-alias cd..="cd .."
-alias gitst="git status"
-alias gitbr="git branch"
-alias gitup="git pull"
-alias dfh="vizex"
-
-
-gitci()
-{
-    nowdate=$(date +"%y.%m%d.%H%M")
-    git pull
-    git add --all .
-    git commit -m "Autocommit V $nowdate"
-    git push origin
-}
-
+source ~/my-bash-config/alias.sh
+source ~/my-bash-config/docker.sh
 
 
 PROMPT="%F{yellow}╭─ %* %K{21}%F{black}%K{21}%F{255} %n ❱ %/ %k%F{21}%f%k"$'\n'"%F{yellow}╰─❱❱❱%K{21}%f%k "
-
 
 
 # EOF #
