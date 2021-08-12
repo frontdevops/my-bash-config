@@ -4,7 +4,8 @@ Simple configurations for Bash and ZSH. These settings have been made for themse
 
 VIM config you can see at this repo [my-vim-config](https://github.com/frontdevops/my-vim-config).
 
-![My Cool Zsh Prompt](https://raw.githubusercontent.com/frontdevops/my-bash-config/master/zsh.jpg)
+![My Cool Zsh Theme](https://raw.githubusercontent.com/frontdevops/my-bash-config/master/zsh.jpg)
+
 
 ## Overview
 Working with the server through the terminal we are deprived of the comfort of desktop systems. It is therefore important to set up a bash console yourself as comfortable as possible. But the server may be more than one. And sometimes you need to go to a different server. So that every time you do not configure the terminal manually, I have created for themselves a set of basic configurations.
@@ -68,7 +69,7 @@ Now edit `.gitconfig` or delete this file and create new with your configuration
 _WARNING!_ If you not trust me, don't do it. You can manually edit your `.bashrc` and set configuration.
 Or not to touch anything and leave everything as is. It's your choice.
 
-![bash](https://img-fotki.yandex.ru/get/15594/9330072.e/0_1281cb_98213924_orig.png)
+![My Cool Bash Theme](https://raw.githubusercontent.com/frontdevops/my-bash-config/master/bash.jpg)
 
 # Git prompt with displaying branch
 
@@ -80,7 +81,8 @@ If you `cd` to a Git working directory, you will see the current Git branch
 name displayed in your terminal prompt. When you're not in a Git working
 directory, your prompt works like normal.
 
-![Git Branch in Prompt](https://img-fotki.yandex.ru/get/15491/9330072.e/0_1281ca_8facf7b1_XL.png)
+![My Cool Bash Theme for root user](https://raw.githubusercontent.com/frontdevops/my-bash-config/master/bash-root.jpg)
+
 
 The new prompt will take effect beginning in your next session.
 This usually means logging out completely.
