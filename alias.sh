@@ -6,6 +6,12 @@ alias gitbr="git branch"
 alias gitup="git pull origin"
 
 
+# Bash
+alias ll='ls -al --color'
+# Mac OS
+# alias ll='ls -Gal'
+
+
 settitle()
 {
     if [[ -z "$ORIG" ]]
