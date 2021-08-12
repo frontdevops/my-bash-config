@@ -17,3 +17,6 @@ source ~/my-bash-config/alias.sh
 
 source ~/my-bash-config/prompt-git.sh
 source ~/my-bash-config/docker.sh
+
+# Only for MacOS
+# source ~/my-bash-config/macos.sh
