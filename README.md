@@ -4,7 +4,7 @@ Simple configurations for Bash and ZSH. These settings have been made for themse
 
 #### Video:
 
-[![My Cool Zsh Theme](https://raw.githubusercontent.com/frontdevops/my-bash-config/master/zsh.jpg)](https://www.youtube.com/embed/ygwv_FkHt9Y)
+[![My Cool Zsh Theme](https://raw.githubusercontent.com/frontdevops/my-bash-config/master/misc/assets/zsh.jpg)](https://www.youtube.com/embed/ygwv_FkHt9Y)
 
 
 VIM config you can see at this repo [my-vim-config](https://github.com/frontdevops/my-vim-config).
@@ -29,7 +29,7 @@ Clone the project to a `myshellconfig` folder in your home directory:
 
 ```bash
 $ cd
-$ git clone https://github.com/frontdevops/my-bash-config.git
+$ git clone https://github.com/frontdevops/my-bash-config.git -–depth 1
 $ ./myshellconfig/install user
 
 # or
@@ -73,7 +73,7 @@ Now edit `.gitconfig` or delete this file and create new with your configuration
 _WARNING!_ If you not trust me, don't do it. You can manually edit your `.bashrc` and set configuration.
 Or not to touch anything and leave everything as is. It's your choice.
 
-![My Cool Bash Theme](https://raw.githubusercontent.com/frontdevops/my-bash-config/master/bash.jpg)
+![My Cool Bash Theme](https://raw.githubusercontent.com/frontdevops/my-bash-config/master/misc/assets/bash.jpg)
 
 # Git prompt with displaying branch
 
@@ -85,7 +85,7 @@ If you `cd` to a Git working directory, you will see the current Git branch
 name displayed in your terminal prompt. When you're not in a Git working
 directory, your prompt works like normal.
 
-![My Cool Bash Theme for root user](https://raw.githubusercontent.com/frontdevops/my-bash-config/master/bash-root.jpg)
+![My Cool Bash Theme for root user](https://raw.githubusercontent.com/frontdevops/my-bash-config/master/misc/assets/bash-root.jpg)
 
 
 The new prompt will take effect beginning in your next session.
