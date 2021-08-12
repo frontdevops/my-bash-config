@@ -1,4 +1,4 @@
---this goes inside for example bgImgIterm.scpt--
+--Change the background picture in iTerm by arguments--
 on run argv
 	tell application "iTerm"
 		tell current session of current window
