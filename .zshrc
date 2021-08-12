@@ -12,7 +12,6 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 #export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
 
 
-alias ll='ls -Gal'
 source ~/my-bash-config/alias.sh
 source ~/my-bash-config/docker.sh
 
