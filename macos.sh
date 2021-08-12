@@ -4,3 +4,10 @@ chbg()
 }
 
 
+if `whoami` -eq 'root'
+then
+    chbg "kali4.jpg"
+else
+    chbg "kali5.jpg"
+fi
+
