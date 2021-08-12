@@ -4,7 +4,7 @@ chbg()
 }
 
 
-if $(whoami) -eq 'root'
+if [ $(id -u) = 0 ]
 then
     chbg "kali4.jpg"
 else
