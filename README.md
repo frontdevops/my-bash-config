@@ -1,6 +1,6 @@
-My Bash Config
+My Bash and ZSH Config
 =============
-Simple configurations for Bash. These settings have been made for themselves. But it can be useful to someone else. You can clone the repository and to further develop its own version. This set of files can be core for your configuration.
+Simple configurations for Bash and ZSH. These settings have been made for themselves. But it can be useful to someone else. You can clone the repository and to further develop its own version. This set of files can be core for your configuration.
 
 ## Overview
 Working with the server through the terminal we are deprived of the comfort of desktop systems. It is therefore important to set up a bash console yourself as comfortable as possible. But the server may be more than one. And sometimes you need to go to a different server. So that every time you do not configure the terminal manually, I have created for themselves a set of basic configurations.
@@ -11,6 +11,7 @@ This configuration I use on all my dedicated servers. I recomended to use screen
 Install configurations for:
  - screen
  - bash
+ - zsh
  - git
 
 ## Installation
@@ -19,8 +20,11 @@ Clone the project to a `myshellconfig` folder in your home directory:
 
 ```bash
 $ cd
-$ git clone https://github.com/frontdevops//my-bash-config.git
+$ git clone https://github.com/frontdevops/my-bash-config.git
 $ ./myshellconfig/install user
+
+# or
+$ ./myshellconfig/install user custom_host_name
 ```
 
 For root user clone the project in your root directory and run:
@@ -30,6 +34,9 @@ $ su
 $ cd
 $ git clone https://github.com/frontdevops//my-bash-config.git
 $ ./myshellconfig/install root
+
+# or
+$ ./myshellconfig/install root custom_host_name
 ```
 
 After installation on your file system will see two links to the files in the directory test:
@@ -43,6 +50,14 @@ I did not replace the original `.bashrc` in your home directory. I add a link to
 ```bash
 >> ~/.bashrc
 ```
+
+You can erase all you configs before instalation:
+```bash
+echo -n > .bashrc
+echo -n > .zshrc
+```
+and after install all configs
+
 
 Now edit `.gitconfig` or delete this file and create new with your configurations.
 
@@ -69,10 +84,10 @@ To enable it in your current session, you can simply run `. ~/.bashrc` or create
 
 # Updating
 
-Assuming you followed the default installation instructions and cloned this repo to `~/myshellconfig`:
+Assuming you followed the default installation instructions and cloned this repo to `~/my-bash-config`:
 
 ```bash
-cd ~/myshellconfig
+cd ~/my-bash-config
 gitup
 ```
 
