@@ -10,7 +10,7 @@ for k in \
     screenrc \
     gitconfig
 do
-    ln -vsfT $cdir/.$k ~/.$k
+    ln -vsf $cdir/.$k ~/.$k
 done
 
 
