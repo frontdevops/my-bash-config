@@ -91,7 +91,16 @@ cd ~/my-bash-config
 gitup
 ```
 
+
 ## License
-```
-Free 4 all!
-```
+### My Standard Open Source License
+1. Free 4 all!
+2. As it is
+3. No guarantees that any of this works anymore
+4. I will not be responsible for your code and do not guarantee
+   that everything works as it should on your server.
+5. Other in [No license text](https://github.com/frontdevops/my-bash-config/blob/main/LICENSE)
+
+
+## Feedback and supports
+If you have any suggestions, create a pull request.
