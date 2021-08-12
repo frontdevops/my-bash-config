@@ -2,6 +2,8 @@ My Bash and ZSH Config
 =============
 Simple configurations for Bash and ZSH. These settings have been made for themselves. But it can be useful to someone else. You can clone the repository and to further develop its own version. This set of files can be core for your configuration.
 
+VIM config you can see at this repo [my-vim-config](https://github.com/frontdevops/my-vim-config).
+
 ## Overview
 Working with the server through the terminal we are deprived of the comfort of desktop systems. It is therefore important to set up a bash console yourself as comfortable as possible. But the server may be more than one. And sometimes you need to go to a different server. So that every time you do not configure the terminal manually, I have created for themselves a set of basic configurations.
 
