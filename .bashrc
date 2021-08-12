@@ -20,6 +20,7 @@ source ~/my-bash-config/docker.sh
 
 # Only for MacOS
 if [[ "$OSTYPE" == "darwin"* ]]
+then
   source ~/my-bash-config/macos.sh
 fi
 
