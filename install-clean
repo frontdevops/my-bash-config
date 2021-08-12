@@ -4,4 +4,6 @@ cd
 echo -n > .zshrc
 echo -n > .bashrc
 
-~/my-bash-config/install $#
+cdir=$(dirname $0)
+
+$cdir/my-bash-config/install $#
