@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+cd
+echo -n > .zshrc
+echo -n > .bashrc
+
+~/my-bash-config/install $@
