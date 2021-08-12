@@ -4,7 +4,9 @@ Simple configurations for Bash and ZSH. These settings have been made for themse
 
 VIM config you can see at this repo [my-vim-config](https://github.com/frontdevops/my-vim-config).
 
-![My Cool Zsh Theme](https://raw.githubusercontent.com/frontdevops/my-bash-config/master/zsh.jpg)
+
+[![My Cool Zsh Theme](https://raw.githubusercontent.com/frontdevops/my-bash-config/master/zsh.jpg)](https://www.youtube.com/embed/ygwv_FkHt9Y)
+
 
 
 ## Overview
