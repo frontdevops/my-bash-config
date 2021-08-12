@@ -6,10 +6,13 @@ alias gitbr="git branch"
 alias gitup="git pull origin"
 
 
-# Bash
-alias ll='ls -al --color'
-# Mac OS
-# alias ll='ls -Gal'
+if [[ "$OSTYPE" == "darwin"* ]]
+then
+    alias ll='ls -Gal'
+else
+    alias ll='ls -al --color'
+fi
+
 
 
 function settitle()
