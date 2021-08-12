@@ -16,7 +16,9 @@ source ~/my-bash-config/alias.sh
 source ~/my-bash-config/docker.sh
 
 # Only for MacOS
-# source ~/my-bash-config/macos.sh
+if [[ "$OSTYPE" == "darwin"* ]]
+  source ~/my-bash-config/macos.sh
+fi
 
 
 PROMPT="%F{yellow}╭─ %* %K{21}%F{black}%K{21}%F{255} %n ❱ %/ %k%F{21}%f%k"$'\n'"%F{yellow}╰─❱❱❱%K{21}%f%k "
