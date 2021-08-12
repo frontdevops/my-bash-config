@@ -12,7 +12,7 @@ alias ll='ls -al --color'
 # alias ll='ls -Gal'
 
 
-settitle()
+function settitle()
 {
     if [[ -z "$ORIG" ]]
     then
@@ -22,7 +22,8 @@ settitle()
     PS1=${ORIG}${TITLE}
 }
 
-progress_sleep()
+
+function progress_sleep()
 {
     for i in `echo -n|awk "END{for(i=0;i<$1;i++)print i;}"`
     do
@@ -32,13 +33,13 @@ progress_sleep()
 }
 
 # yum install -y idn
-pingrf()
+function pingrf()
 {
     ping $(idn --quiet "$@")
 }
 
 
-gitci()
+function gitci()
 {
     nowdate=$(date +"%y.%m%d.%H%M")
     git pull
