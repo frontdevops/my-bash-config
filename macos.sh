@@ -22,6 +22,12 @@ function new()
 }
 
 
+function hss()
+{
+    chbg "kali3.jpg"
+    ssh $@
+}
+
 
 #
 # -----
