@@ -2,10 +2,12 @@ My Bash and ZSH Config
 =============
 Simple configurations for Bash and ZSH. These settings have been made for themselves. But it can be useful to someone else. You can clone the repository and to further develop its own version. This set of files can be core for your configuration.
 
-VIM config you can see at this repo [my-vim-config](https://github.com/frontdevops/my-vim-config).
-
+#### Video:
 
 [![My Cool Zsh Theme](https://raw.githubusercontent.com/frontdevops/my-bash-config/master/zsh.jpg)](https://www.youtube.com/embed/ygwv_FkHt9Y)
+
+
+VIM config you can see at this repo [my-vim-config](https://github.com/frontdevops/my-vim-config).
 
 
 
