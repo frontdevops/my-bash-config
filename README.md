@@ -101,6 +101,18 @@ cd ~/my-bash-config
 gitup
 ```
 
+### Use screen on mobile devices
+If you use mobile shell, like https://blink.sh run `screen` with key `-U` for correct display UTF8 symols
+
+```bash
+# create new
+screen -US main
+
+# resume to session
+screen -Ux
+```
+
+
 
 ## License
 ### My Standard Open Source License
