@@ -1,5 +1,5 @@
 #defc1 off
-defutf8 on
+#defutf8 on
 utf8 on
 
 # the following two lines give a two-line status, with the current window highlighted
