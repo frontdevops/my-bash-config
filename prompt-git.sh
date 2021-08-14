@@ -9,7 +9,9 @@ function find_git_branch()
             branch='detached*'
         fi
         
-        git_branch="❰ $branch"$(find_git_dirty)" ❱"
+        find_git_dirty
+        
+        git_branch="❰ $branch $git_dirty ❱"
     else
         git_branch=""
     fi
