@@ -36,7 +36,7 @@ function find_git_dirty()
 #if -z `echo $PROMPT_COMMAND | grep 'find_git_branch1'`
 if ! grep -q 'find_git_branch' <<< $PROMPT_COMMAND
 then
-    PROMPT_COMMAND="find_git_branch;;$PROMPT_COMMAND"
+    PROMPT_COMMAND="find_git_branch;$PROMPT_COMMAND"
 fi
 
 
