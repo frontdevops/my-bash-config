@@ -10,7 +10,8 @@ case ${1?"Set type argument: root or user"} in
 	# For user
 	# echo 'PS1="\n\[\e[32m\][ \A\[\e[m\] <\u@\h> \[\e[33m\]\w\[\e[m\] \[\e[32m\]\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\[\e[41m\][ bash: \[\e[m\]\[\e[32m\] "'
 	# echo 'PS1="\n\e[0;33m☰\e[0;33m \t \e[0;93m❱ \u@\e[33;01;36m\h \033[01;33m\w \[\033[01;35m\]\$\n\e[m\e[0;93m❱❱❱ \e[m\e[32m"'
-	echo 'PS1="\n\[\e[48;5;28;1;5;0;33m\]▶\[\e[48;5;28;97m\]  \A  \[\e[48;5;34;38;5;232m\]\[\e[1;5;33m\]▶\[\e[38;5;232m\]  \u@\h  \[\e[48;5;30m\]\[\e[1;5;33m\]▶\[\e[38;5;15m\] \w \[\e[40;1;5;33m\]▶  \[\e[40;32m\]\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\n\[\e[1;5;33m\]❱ \[\e[m\]\[\e[32m\]"'
+	#echo 'PS1="\n\[\e[48;5;28;1;5;0;33m\]▶\[\e[48;5;28;97m\]  \A  \[\e[48;5;34;38;5;232m\]\[\e[1;5;33m\]▶\[\e[38;5;232m\]  \u@\h  \[\e[48;5;30m\]\[\e[1;5;33m\]▶\[\e[38;5;15m\] \w \[\e[40;1;5;33m\]▶  \[\e[40;32m\]\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\n\[\e[1;5;33m\]❱ \[\e[m\]\[\e[32m\]"'
+	echo 'PS1="\n\e[0;93m┌[☰ \t ❱ \e[0;95m \u@\h \e[0;96m ❱ \w ❱\e[m\e[32m \e[0;91m\$git_branch\$git_dirty \n\e[0;93m└[\e[❱m\e[32m "'
 ;;
 esac
 
