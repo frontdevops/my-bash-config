@@ -11,7 +11,7 @@ function find_git_branch()
         
         find_git_dirty
         
-        git_branch="❰ $branch $git_dirty ❱"
+        git_branch="❰ $branch $git_dirty❱"
     else
         git_branch=""
     fi
@@ -23,7 +23,7 @@ function find_git_dirty()
     local status=$(git status --porcelain 2> /dev/null)
     if [[ "$status" != "" ]]
     then
-        git_dirty=' changed'
+        git_dirty='changed '
     else
         git_dirty=''
     fi
