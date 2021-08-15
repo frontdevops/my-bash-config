@@ -6,4 +6,4 @@ echo -n > .bashrc
 
 cdir=$(dirname $0)
 
-$cdir/install $#
+$cdir/install $@
