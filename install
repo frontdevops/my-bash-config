@@ -29,7 +29,7 @@ else
     echo `$cdir/prompt.bash $itype` >> ~/.bashrc
 fi
 
-echo `$cdir/prompt.zsh $itype`  >> ~/.zshrc
+$cdir/prompt.zsh $itype
 
 echo -e "\n\n" >> ~/.bashrc
 echo -e "\n\n" >> ~/.zshrc
