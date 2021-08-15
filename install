@@ -23,19 +23,21 @@ echo -e "\n\n" >> ~/.bashrc
 echo "Set prompt string"
 if [ ! -z "$hostname" ]
 then
-    echo -e "\tReplace host to user hostname: $hostname"
-    echo `$cdir/prompt $itype` | sed "s/\\\h/$hostname/" >> ~/.bashrc
+    ps=`$cdir/prompt.bash $itype` | sed "s/\\\h/$hostname/"
+    echo -e "\tReplace host to user hostname: $hostname\n$ps\n"
+    echo $ps >> ~/.bashrc
+    
+    ps=`$cdir/prompt.zsh $itype`  | sed "s/\\\h/$hostname/"
+    echo -e "\tReplace host to user hostname: $hostname\n$ps\n"
+    echo $ps  | sed "s/\\\h/$hostname/" >> ~/.zshrc
 else
-    echo `$cdir/prompt $itype` >> ~/.bashrc
+    echo `$cdir/prompt.bash $itype` >> ~/.bashrc
+    echo `$cdir/prompt.zsh $itype`  >> ~/.zshrc
 fi
 
 echo -e "\n\n" >> ~/.bashrc
-
-
-echo "Add .zshrc config"
-echo -e "\n\n\n#Added by my-bash-config\n\n"
-cat ~/$cdir/.zshrc >> ~/.zshrc
 echo -e "\n\n" >> ~/.zshrc
+
 
 
 echo "Complete"
