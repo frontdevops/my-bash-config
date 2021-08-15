@@ -5,7 +5,7 @@
 
 [user]
 	name = frontdevops
-	email = alexander.majorov@gmail.com
+	email = 
 
 [alias]
     co = checkout
@@ -41,4 +41,4 @@
         changed = green
         untracked = cyan
 [credential]
-	helper = osxkeychain
+	helper = cache
