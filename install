@@ -23,13 +23,10 @@ echo -e "\n\n" >> ~/.bashrc
 echo "Set prompt string"
 if [ ! -z "$hostname" ]
 then
-    ps=$(`$cdir/prompt.bash $itype` | sed "s/\\\h/$hostname/")
-    echo -e "\tReplace host to user hostname: $hostname\n$ps\n"
-    echo $ps >> ~/.bashrc
-    
-    ps=$(`$cdir/prompt.zsh $itype`  | sed "s/\\\h/$hostname/")
-    echo -e "\tReplace host to user hostname: $hostname\n$ps\n"
-    echo $ps  | sed "s/\\\h/$hostname/" >> ~/.zshrc
+    echo -e "\tReplace host to user hostname: $hostname\n"
+
+    echo `$cdir/prompt.bash $itype`| sed "s/\\\h/$hostname/" >> ~/.bashrc
+    echo `$cdir/prompt.zsh $itype` | sed "s/\\\h/$hostname/" >> ~/.zshrc
 else
     echo `$cdir/prompt.bash $itype` >> ~/.bashrc
     echo `$cdir/prompt.zsh $itype`  >> ~/.zshrc
