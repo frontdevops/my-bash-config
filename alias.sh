@@ -44,11 +44,18 @@ function pingrf()
 
 function gitci()
 {
-    nowdate=$(date +"%y.%m%d.%H%M")
+    if [ -z "$1"]
+    then
+        ver=$(date +"%y.%m%d.%H%M")
+    else
+        ver=$1
+    fi
+
     git pull
     git add --all .
-    git commit -m "Autocommit V $nowdate"
+    git commit -m "Changes V $ver"
     git push origin
+    git status
 }
 
 
