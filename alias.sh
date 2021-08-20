@@ -59,3 +59,12 @@ function gitci()
 }
 
 
+function newdir()
+{
+    dname=$(date +"%y.%m%d.%H%M")
+    mkdir -v $dname
+    ls -al
+    cd $dname
+    pwd
+}
+
