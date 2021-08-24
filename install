@@ -8,7 +8,8 @@ cdir=$(dirname $0)
 
 for k in \
     screenrc \
-    gitconfig
+    gitconfig \
+    vimrc
 do
     ln -vsf $cdir/.$k ~/.$k
 done
