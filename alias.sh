@@ -1,9 +1,16 @@
-# pip install vizex
-alias dfh="vizex"
+
+if [[ "root" == $(whoami) ]]
+then
+    alias rm='rm -i'
+    alias cp='cp -i'
+    alias mv='mv -i'
+fi
+
 alias cd..="cd .."
 alias gitst="git status"
 alias gitbr="git branch"
 alias gitup="git pull origin"
+alias dfh="vizex" # pip install vizex
 
 
 if [[ "$OSTYPE" == "darwin"* ]]
