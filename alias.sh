@@ -22,6 +22,12 @@ fi
 
 
 
+function sshkey()
+{
+    ssh-keygen -t rsa -b 4096 -C "$(whoami)@$(hostname)"
+}
+
+
 function settitle()
 {
     if [[ -z "$ORIG" ]]
