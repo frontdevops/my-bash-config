@@ -24,7 +24,7 @@ fi
 
 function sshkey()
 {
-    ssh-keygen -t rsa -b 4096 -C "$(whoami)@$(hostname)"
+    ssh-keygen -t rsa -b 4096 -C "$(whoami)@$(hostname)" -f ~/.ssh/id_rsa -q -N ""
     if ! command -v pbcopy &> /dev/null
     then
         pbcopy ~/.ssh/id_rsa.pub && echo "Key data copied to clipboard. For paste use 'pbpaste'"
