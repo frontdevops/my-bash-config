@@ -1,10 +1,14 @@
 alias dockers='docker ps -lq'
 
-dockerip() {
+
+function dockerip()
+{
     docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' "$@"
 }
 
-dockerips() {
+
+function dockerips()
+{
     printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' =
     #seq -s- $COLUMNS|tr -d '[:digit:]'
 
@@ -32,4 +36,17 @@ dockerips() {
 }
 
 
+function dockersys()
+{
+    mem_amount_total_with_unit=$(docker system info | grep 'Total Memory: ' | tr -d 'Total Memory: ')
+    unit=$(echo ${mem_amount_total_with_unit} | sed 's/[0-9\.]*//g')
+    mem_amount_total=$(echo ${mem_amount_total_with_unit} | sed 's/[^0-9\.]*//g')
+    mem_percent_used=$(docker stats --no-stream --format '{{.MemPerc}}' | tr -d '%' | paste -s -d '+' - | bc)
+    mem_percent_used=${mem_percent_used:-0}
+    mem_amount_used=$(echo "scale=2; ${mem_amount_total} * ${mem_percent_used} / 100" | bc)
+
+    echo -e "Memory Amount Total:\t${mem_amount_total}${unit}"
+    echo -e "Memory Amount Used:\t${mem_amount_used}${unit}"
+    echo -e "Memory Percent Used:\t${mem_percent_used}%"
+}
 
