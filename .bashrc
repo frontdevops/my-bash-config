@@ -5,6 +5,8 @@ fi
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
+export PATH=~/.local/bin:$PATH
+
 # User specific aliases and functions
 HISTCONTROL=ignoreboth
 
