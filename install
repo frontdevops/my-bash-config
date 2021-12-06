@@ -14,6 +14,8 @@ do
     ln -vsf $cdir/.$k ~/.$k
 done
 
+ln -vsf $cdir/.tmux.conf ~/.tmux.conf
+
 
 echo "Add .bashrc link"
 echo -e "\n\n\n#Added by my-bash-config\n\n"
