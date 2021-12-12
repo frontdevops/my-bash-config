@@ -42,3 +42,5 @@
         untracked = cyan
 [credential]
 	helper = cache
+[pull]
+	rebase = false
