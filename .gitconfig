@@ -4,7 +4,7 @@
     whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
 
 [user]
-	name = frontdevops
+	name = Alexander Mayorov
 	email = 
 
 [alias]
