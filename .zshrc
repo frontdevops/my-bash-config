@@ -1,3 +1,4 @@
+DISABLE_AUTO_TITLE="true"
 
 export CLICOLOR=1
 # Default
