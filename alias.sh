@@ -6,11 +6,25 @@ then
     alias mv='mv -i'
 fi
 
+
+case $SHELL in
+*/zsh) 
+   CURRENT_SHELL="zsh"
+   ;;
+*/bash)
+   CURRENT_SHELL="bash"
+   ;;
+*)
+   CURRENT_SHELL="unknown"
+esac
+
 alias cd..="cd .."
 alias gitst="git status"
 alias gitbr="git branch"
 alias gitup="git pull origin"
 alias dfh="vizex" # pip install vizex
+alias screen-x="tmux attach -t devops" # emualte screen -x, because I'm many used screen
+
 
 
 if [[ "$OSTYPE" == "darwin"* ]]
@@ -32,14 +46,25 @@ function sshkey()
 }
 
 
+
 function settitle()
 {
-    if [[ -z "$ORIG" ]]
+    title=$*
+
+    if [[ "BASH" == CURRENT_SHELL ]]
     then
-         ORIG=$PS1
+        if [[ -z "$ORIG" ]]
+        then
+             ORIG=$PS1
+        fi
+        TITLE="\[\e]2;$title\a\]"
+        PS1=${ORIG}${TITLE}
     fi
-    TITLE="\[\e]2;$*\a\]"
-    PS1=${ORIG}${TITLE}
+    
+    if [[ "ZSH" == CURRENT_SHELL ]]
+    then
+        echo -n -e "\033]0;$title\007"
+    fi
 }
 
 
