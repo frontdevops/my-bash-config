@@ -1,0 +1,23 @@
+tmux:
+
+ctrl + b + % to make a vertical split.
+ctrl + b + " to make a Horizontal split.
+ctrl + b + left arrow to move to the left pane.
+ctrl + b + " to make a Horizontal split.
+
+
+# horizontally
+:split-window -h
+# vertically
+:split-window -v
+
+:resize-pane -$DIRECTION $cell-size
+
+:resize-pane -L 20 # Resizes the current pane Left by 20 cells
+:resize-pane -R 20 # Resizes the current pane Right by 20 cells
+:resize-pane -D 20 # Resizes the current pane Down by 20 cells
+:resize-pane -U 20 # Resizes the current pane Upward by 20 cells
+
+
+tmux resize-pane -D 10
+
