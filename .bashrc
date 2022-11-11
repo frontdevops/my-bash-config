@@ -32,7 +32,7 @@ fi
 
 
 
-if [[ '' = "$TMUX" ]]
+if [[ '' != "$TMUX" ]]
 then
     export INPUTRC=~/my-bash-config/.inputrc
     cat ~/my-bash-config/ascii/tmux-logo.txt
