@@ -5,7 +5,7 @@
 
 [user]
 	name = Alexander Mayorov
-	email = 
+	email = alexander.majorov@gmail.com
 
 [alias]
     co = checkout
@@ -44,3 +44,8 @@
 	helper = cache
 [pull]
 	rebase = false
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
