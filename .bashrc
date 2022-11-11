@@ -35,15 +35,12 @@ fi
 if [[ '' = "$TMUX" ]]
 then
     export INPUTRC=~/my-bash-config/.inputrc
-    echo "Run new session"
-    echo -e "\ttmux new -s devops"
-    echo "or connect to existsing"
-    echo -e "\ttmux attach -t devops"
-else
-    export INPUTRC=~/my-bash-config/.tmux.inputrc
     cat ~/my-bash-config/ascii/tmux-logo.txt
     sleep 2
     clear
-    echo "For exit press: CTRL+b + d"
+    echo "╔════════════════════════════╗"
+    echo "║ For exit press: CTRL+a + d ║"
+    echo "╚════════════════════════════╝"
+    echo
 fi
 
