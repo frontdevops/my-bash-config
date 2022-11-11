@@ -30,3 +30,13 @@ then
   source ~/my-bash-config/macos.sh
 fi
 
+
+
+if [[ '' = "$TMUX" ]]
+then
+    export INPUTRC=~/my-bash-config/.inputrc
+else
+    export INPUTRC=~/my-bash-config/.tmux.inputrc
+	cat ~/my-bash-config/ascii/tmux-logo.txt
+fi
+
