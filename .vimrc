@@ -88,6 +88,12 @@ map <silent> <F6> :NERDTreeToggle<CR>
 map <silent> <F7> :NERDTreeFind<CR>
 map <silent> <F8> :TagbarToggle<CR>
 
+" @todo: 
+" map <silent> <F1> <Esc>gT<CR>
+" map <silent> <F2> <Esc>gt<CR>
+" map <silent> <F3> <Esc>:tabnew<CR>
+
+
 
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
