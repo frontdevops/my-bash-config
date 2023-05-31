@@ -110,3 +110,26 @@ function newdir()
     pwd
 }
 
+function myhelp()
+{
+    cat << EOF
+Tmux cheat sheet:
+Ctrl + a + % to split the current pane vertically.
+Ctrl + a + " to split the current pane horizontally.
+Ctrl + a + x to close the current pane.
+_____________________
+Resize in Steps:
+Ctrl-a : to enter command mode.
+- Type resize-pane -D to decrease the pane size vertically (shrink height).
+- Type resize-pane -U to increase the pane size vertically (expand height).
+- Type resize-pane -L to decrease the pane size horizontally (shrink width).
+- Type resize-pane -R to increase the pane size horizontally (expand width).
+
+For example, to decrease the pane size by 10 lines vertically, you can enter resize-pane -D 10.
+_____________________
+Resize Interactively:
+- Ctrl-a : to enter command mode.
+- Type resize-pane -Z to toggle pane zoom (maximize/restore the current pane).
+- While in zoomed mode, you can interactively resize the pane by holding the Ctrl-b key and using the arrow keys or hjkl keys (vim-style) to adjust the size.
+EOF
+}
